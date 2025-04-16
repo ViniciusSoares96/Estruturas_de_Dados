@@ -3,7 +3,7 @@
 
 # Ignorar diretórios de build comuns
 /build/
-out/
+/out/
 /bin/
 target/
 
