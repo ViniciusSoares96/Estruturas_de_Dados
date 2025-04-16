@@ -1,0 +1,36 @@
+# Ignorar arquivos de compilação
+*.class
+
+# Ignorar diretórios de build comuns
+/build/
+/out/
+/bin/
+target/
+
+# Ignorar configurações de IDE
+/.idea/
+/*.iml
+
+# Ignorar logs
+*.log
+
+# Ignorar informações do sistema operacional
+*.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de cache
+*.jar
+*.war
+*.ear
+
+# Ignorar dependências baixadas 🛠️ (se você usar um gerenciador de dependências, como Maven ou Gradle)
+/lib/
+/.gradle/
+/.mvn/
+
+# Ignorar o repositório local do Maven
+.m2/
+
+# Arquivos temporários
+*.tmp
+*.temp
