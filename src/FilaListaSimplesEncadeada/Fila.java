@@ -1,10 +1,11 @@
 package FilaListaSimplesEncadeada;
 
 public class Fila implements IFila {
-    @Override
-    public void enqueue(Object o) {
 
-    }
+
+
+    @Override
+    public void enqueue(Object o) {}
 
     @Override
     public Object dequeue() {

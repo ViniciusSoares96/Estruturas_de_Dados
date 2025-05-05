@@ -13,32 +13,10 @@ public class Fila implements IFila{
 
     }
 
-    public boolean isEmpty(){
-        return inicio == fim;
-    }
-
-    public int size(){
-        return (capacidade - inicio + fim) % capacidade;
-    }
-
-
-    public boolean isFull(){
-        return size() == capacidade -1 ;
-    }
-
     @Override
     public void enqueue(Object o) {
         if(isFull()){
-            capacidade *=2;
-            Object[] filaNova = new Object[capacidade];
-            int ii = inicio;
-            for(int ff = 0;ff<size();ff++){
-                filaNova[ff] = fila[ii];
-                ii=(ii+1)%capacidade;
-            }
-            fim = size();
-            inicio = 0;
-            fila = filaNova;
+            duplicar();
         }
         fila[fim] = o;
         fim = (fim+1)%capacidade;
@@ -54,6 +32,18 @@ public class Fila implements IFila{
         return o;
     }
 
+    public boolean isEmpty(){
+        return inicio == fim;
+    }
+
+    public int size(){
+        return (capacidade - inicio + fim) % capacidade;
+    }
+
+    public boolean isFull(){
+        return size() == capacidade -1 ;
+    }
+
     @Override
     public Object first() {
         Object o = fila[inicio];
@@ -67,6 +57,17 @@ public class Fila implements IFila{
         System.out.println();
     }
 
-
+    private void duplicar(){
+        int novaCapacidade = capacidade*2;
+        Object[] filaNova = new Object[novaCapacidade];
+        int ii = inicio;
+        for(int ff = 0;ff<size();ff++){
+            filaNova[ff] = fila[ii];
+            ii=(ii+1)%novaCapacidade;
+        }
+        fim = size();
+        inicio = 0;
+        fila = filaNova;
+    }
 
 }
