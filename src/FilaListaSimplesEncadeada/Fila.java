@@ -2,8 +2,6 @@ package FilaListaSimplesEncadeada;
 
 public class Fila implements IFila {
 
-
-
     @Override
     public void enqueue(Object o) {}
 

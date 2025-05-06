@@ -4,23 +4,13 @@ public class NoSimples {
     private Object elemento;
     private NoSimples proximo;
 
-
-    public NoSimples(Object o) {
-        this.elemento = o;
-        this.proximo = null;
-    }
-
-    public NoSimples(Object o, NoSimples proximo) {
-        this.elemento = o;
+    public NoSimples(NoSimples proximo, Object elemento) {
         this.proximo = proximo;
+        this.elemento = elemento;
     }
 
-    public Object getElemento() {
-        return elemento;
-    }
-
-    public void setElemento(Object e) {
-        elemento = e;
+    public NoSimples(Object elemento) {
+        this.elemento = elemento;
     }
 
     public NoSimples getProximo() {
@@ -31,11 +21,11 @@ public class NoSimples {
         this.proximo = proximo;
     }
 
-    @Override
-    public String toString() {
-        return "NoSimples{" +
-                "elemento=" + elemento +
-                ", proximo=>" + proximo +
-                '}';
+    public Object getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(Object elemento) {
+        this.elemento = elemento;
     }
 }
