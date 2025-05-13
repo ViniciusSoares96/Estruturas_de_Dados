@@ -1,10 +1,10 @@
 package PilhaArray;
 
 
-public interface IPilha {
+public interface IPilha<T> {
     public int size();    
     public boolean isEmpty();
-    public Object top() throws PilhaVaziaExcecao;
-    public void push(Object o);
-    public Object pop() throws PilhaVaziaExcecao;
+    public T top() throws PilhaVaziaExcecao;
+    public void push(T o);
+    public T pop() throws PilhaVaziaExcecao;
 }

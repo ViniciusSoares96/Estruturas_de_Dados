@@ -5,7 +5,7 @@ public class testePilha {
 	public static void main(String[] args) {
 		try {
 			// Criar uma pilha com capacidade inicial de 3 elementos
-			Pilha pilha = new Pilha(3);
+			Pilha<Integer> pilha = new Pilha(3);
 
 			// Testar se a pilha está inicialmente vazia
 			System.out.println("A pilha está vazia? " + pilha.isEmpty());
