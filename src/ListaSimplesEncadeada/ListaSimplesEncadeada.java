@@ -24,7 +24,6 @@ public class ListaSimplesEncadeada {
     }
 
     public void inserirInicio(Object o) {
-        // se a fila estiver vazia
         NoSimples no = new NoSimples(o);
         if(inicio == null && fim == null) {
             fim = no;

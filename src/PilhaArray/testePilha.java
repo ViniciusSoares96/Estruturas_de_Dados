@@ -1,4 +1,4 @@
-import PilhaArray.*;
+package PilhaArray;
 
 public class testePilha {
 
@@ -38,10 +38,14 @@ public class testePilha {
 			// Verificar se a pilha está vazia após remover todos os elementos
 			System.out.println("A pilha está vazia? " + pilha.isEmpty());
 			System.out.println("Elemento no topo da pilha: " + pilha.pop());
-			pilha.push(10);
-			pilha.push(10);
+			pilha.push(1);
+			pilha.push(2);
+			pilha.push(3);
+			pilha.push(4);
+			pilha.push(5);
 			System.out.println("Numero de elementos na pilha: " + pilha.size());
-
+			System.out.println("mostrar pilha: ");
+			pilha.mostrarPilha();
 			// Tentar desempilhar de uma pilha vazia (gera exceção)
 			try {
 				pilha.pop();

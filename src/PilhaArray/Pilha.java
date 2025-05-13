@@ -1,5 +1,8 @@
 package PilhaArray;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Pilha implements IPilha {
 
     public int t = -1;
@@ -61,8 +64,17 @@ public class Pilha implements IPilha {
         if(isEmpty()){
             throw new PilhaVaziaExcecao("Pilha vazia");
         }else{
+            Object temp = pilha[t];
             t--;
-            return pilha[t+1];
+            pilha[t+1] = null;
+            return temp;
         }
+    }
+
+    public void mostrarPilha(){
+        for(int i = capacidade-1;i>=0;i--){
+            System.out.println(pilha[i]);
+        }
+        System.out.println(" ");
     }
 }
