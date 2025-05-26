@@ -11,7 +11,7 @@ public class TorreHanoiApp {
         int jogadas = 0;
         while(i!=1){
             jogadas++;
-            System.out.println("Jogadas: " + jogadas);
+
             System.out.println("Torre A : ");
             torreHanoi.torreA.mostrarPilha();
             System.out.println("Torre B : ");
@@ -19,6 +19,8 @@ public class TorreHanoiApp {
             System.out.println("Torre C : ");
             torreHanoi.torreC.mostrarPilha();
 
+            System.out.println("Jogadas: " + jogadas);
+            System.out.println("");
             System.out.print("Torre de origem (a,b ou c):");
             String origem = sc.next();
             System.out.print("Torre de destino (a,b ou c):");
@@ -39,7 +41,6 @@ public class TorreHanoiApp {
                 System.out.println("Movimento não permitido");
             }
         }
-
 
         sc.close();
 
